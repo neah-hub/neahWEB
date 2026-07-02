@@ -7,6 +7,9 @@ const galleryWindow = document.querySelector(".gallery-window");
 const aboutWindow = document.querySelector(".about-window");
 const portalsWindow = document.querySelector(".portals-window");
 
+const kissbookWindow = document.querySelector(".kissbook-window");
+const kissBtn = document.getElementById("kiss-btn");
+
 const servicesBtn = document.getElementById("songs-btn");
 const homeBtn = document.getElementById("home-btn");
 
@@ -130,6 +133,20 @@ document.getElementById("portals-btn").addEventListener("click", (e) => {
 document.querySelector(".portals-close").onclick = () => {
 
     portalsWindow.classList.remove("open");
+
+};
+
+// Kissbook
+
+kissBtn.addEventListener("click", () => {
+
+    kissbookWindow.classList.add("open");
+
+});
+
+document.querySelector(".kissbook-close").onclick = () => {
+
+    kissbookWindow.classList.remove("open");
 
 };
 
@@ -257,19 +274,87 @@ playlist.forEach((song, index) => {
 =========================== */
 
 
-async function loadComments() {
+async function loadComments(){
+
+    const container =
+        document.getElementById("kissbook-comments");
+
+    container.innerHTML = "";
 
     const { data, error } = await window.supabase
         .from("kissbook")
         .select("*")
-        .order("created_at", { ascending: true });
-
-    console.log(data);
+        .order("created_at",{ascending:true});
 
     if(error){
+
         console.error(error);
+        return;
+
     }
+
+    data.forEach(comment=>{
+
+        container.innerHTML += `
+
+        <div class="kiss-card">
+
+            <h3>@${comment.username}</h3>
+
+            <p>${comment.message}</p>
+
+        </div>
+
+        `;
+
+    });
 
 }
 
 loadComments()
+
+
+/* ===========================
+   POSTING COMMENTS
+=========================== */
+
+async function postComment(){
+
+    const messageBox =
+        document.getElementById("kissbook-message");
+
+    const message = messageBox.value.trim();
+
+    if(message === "") return;
+
+    const { error } = await window.supabase
+        .from("kissbook")
+        .insert([
+            {
+                username: "NELLY",
+                email: "",
+                message: message,
+                is_anonymous: false
+            }
+        ]);
+
+    if(error){
+
+        console.error(error);
+        return;
+
+    }
+
+    messageBox.value = "";
+
+    loadComments();
+
+}
+
+/* ===========================
+   INITIALIZE
+=========================== */
+
+document.getElementById("post-kiss").addEventListener("click", postComment);
+
+loadComments();
