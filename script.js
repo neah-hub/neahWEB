@@ -14,6 +14,7 @@ const servicesBtn = document.getElementById("songs-btn");
 const homeBtn = document.getElementById("home-btn");
 
 const clickSound = document.getElementById("clickSound");
+const kissSound = document.getElementById("kissSound");
 
 /* ===========================
    PLAYLIST
@@ -139,6 +140,9 @@ document.querySelector(".portals-close").onclick = () => {
 // Kissbook
 
 kissBtn.addEventListener("click", () => {
+
+    kissSound.currentTime = 0;
+    kissSound.play().catch(() => {});
 
     kissbookWindow.classList.add("open");
 
@@ -284,7 +288,7 @@ async function loadComments(){
     const { data, error } = await window.supabase
         .from("kissbook")
         .select("*")
-        .order("created_at",{ascending:false});
+        .order("created_at",{ascending:true});
 
     if(error){
 
@@ -299,8 +303,7 @@ async function loadComments(){
 
         <div class="kiss-card">
 
-            <h3>@${comment.username}</h3>
-
+            <h3>♡ @${comment.username}</h3>
             <p>${comment.message}</p>
 
         </div>
@@ -309,9 +312,9 @@ async function loadComments(){
 
     });
 
-}
+    container.scrollTop = container.scrollHeight;
 
-loadComments()
+}
 
 
 /* ===========================
