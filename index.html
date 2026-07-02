@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="A simple website starter template." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="thekisss.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>neahWEB</title>
+    
+</head>
+<body>
+	<header>
+		<nav>
+			<h1>neahWEB</h1>
+			<ul>
+				<li><a href="#" id="home-btn">Home</a></li>
+                <li><a href="#" id="about-btn">About</a></li>
+				<li><a href="#" id="songs-btn">Songs</a></li>
+                <li><a href="#" id="gallery-btn">Gallery</a></li>
+                <li><a href="#" id="portals-btn">Portals</a></li>
+            </ul>
+		</nav>
+        <img src="thekisss.png" alt="kiss" class="kiss-image" />
+	</header>
+
+     <!-- playlist starts -->
+    <div class="window songs-window">
+        <div class="title-bar">
+            <span>the best playlist ever</span>
+
+            <div class="buttons">
+                <button id="minimize">−</button>
+                <button id="maximize">❐</button>
+                <button id="close">✕</button>
+            </div>
+        </div>
+
+        <div class="window-content">
+
+            <div class="song-card">
+                <h3>love buzz</h3>
+
+                <audio id="song1">
+                    <source src="lovebuzz.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="controls">
+                    <button onclick="playSong('song1')">play</button>
+                    <button onclick="pauseSong('song1')">pause</button>
+                    <button onclick="volumeUp('song1')">vol+</button>
+                    <button onclick="volumeDown('song1')">vol-</button>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <h3>aneurysm</h3>
+
+                <audio id="song2">
+                    <source src="aneurysm.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="controls">
+                    <button onclick="playSong('song2')">play</button>
+                    <button onclick="pauseSong('song2')">pause</button>
+                    <button onclick="volumeUp('song2')">vol+</button>
+                    <button onclick="volumeDown('song2')">vol-</button>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <h3>rape me</h3>
+
+                <audio id="song3">
+                    <source src="rapeme.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="controls">
+                    <button onclick="playSong('song3')">play</button>
+                    <button onclick="pauseSong('song3')">pause</button>
+                    <button onclick="volumeUp('song3')">vol+</button>
+                    <button onclick="volumeDown('song3')">vol-</button>
+                </div>
+            </div>
+            <div class="song-card">
+                <h3>eternal sunshine</h3>
+
+                <audio id="song4">
+                    <source src="eternalsunshine.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="controls">
+                    <button onclick="playSong('song4')">play</button>
+                    <button onclick="pauseSong('song4')">pause</button>
+                    <button onclick="volumeUp('song4')">vol+</button>
+                    <button onclick="volumeDown('song4')">vol-</button>
+                </div>
+            </div>
+            <div class="song-card">
+                <h3>be my baby</h3>
+
+                <audio id="song5">
+                    <source src="bemybaby.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="controls">
+                    <button onclick="playSong('song5')">play</button>
+                    <button onclick="pauseSong('song5')">pause</button>
+                    <button onclick="volumeUp('song5')">vol+</button>
+                    <button onclick="volumeDown('song5')">vol-</button>
+                </div>
+            </div>
+            <div class="song-card">
+                <h3>the boy is mine</h3>
+
+                <audio id="song6">
+                    <source src="theboyismine.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="controls">
+                    <button onclick="playSong('song6')">play</button>
+                    <button onclick="pauseSong('song6')">pause</button>
+                    <button onclick="volumeUp('song6')">vol+</button>
+                    <button onclick="volumeDown('song6')">vol-</button>
+                </div>
+            </div>
+            <div class="song-card">
+                <h3>my favourite part</h3>
+
+                <audio id="song7">
+                    <source src="myfavouritepart.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="controls">
+                    <button onclick="playSong('song7')">play</button>
+                    <button onclick="pauseSong('song7')">pause</button>
+                    <button onclick="volumeUp('song7')">vol+</button>
+                    <button onclick="volumeDown('song7')">vol-</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- playlist ends -->
+
+    <!-- gallery starts -->
+    <div class="window gallery-window">
+
+        <div class="title-bar">
+            <span>Gallery</span>
+
+            <div class="buttons">
+                <button class="gallery-min">−</button>
+                <button class="gallery-max">❐</button>
+                <button class="gallery-close">✕</button>
+            </div>
+        </div>
+
+        <div class="window-content gallery-grid">
+
+            <img src="me.jpg" alt="">
+
+         </div>
+       
+    </div>
+    <!-- gallery ends -->
+
+    <!-- about starts -->
+    <div class="window about-window">
+
+        <div class="title-bar">
+            <span>About Me</span>
+
+            <div class="buttons">
+                <button class="about-min">−</button>
+                <button class="about-max">❐</button>
+                <button class="about-close">✕</button>
+            </div>
+        </div>
+
+        <div class="window-content">
+
+            <table class="about-table">
+
+                <tr>
+                    <td class="category">General</td>
+                    <td class="info">
+                        vocal diva, creative, substacker, 
+                        rabbit-hole premium membership holder, 
+                        my parents' nightmare and daydream, 
+                        aquarian, bad bitch, anti-capitalist, 
+                        wannabe lesbian, chaos-thriver, 
+                        website builder, pasta eater,
+                        self-hairstylist, nocturnal, 
+                        my guitarist bf ♡ 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">Music</td>
+                    <td class="info">
+                        ariana, abel, britney, mj, olivia, camilla, 
+                        nirvana, radiohead, kelly, macmiller, lana,
+                        bruno, sza, doja, laufey,  travis, pop, rock,
+                        metal, rap, rnb...
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">Games</td>
+                    <td class="info">
+                        roblox, raft survival, bgmi,
+                        skribbl.io, among us
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">Movies / Shows</td>
+                    <td class="info">
+                        frankenstein, gossip girl, wednesday, the vampire diaries, how to get away with murder...
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">Currently</td>
+                    <td class="info">
+                        ♡ makin mah website<br>
+                        ♡ listening to love buzz<br>
+                        ♡ in love w myself
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="category">Random</td>
+                    <td class="info">
+                        feb 9 is my birthday.<br>
+                        i sleep when the sun comes up.<br>
+                        fashion is obvious to my soul.<br>
+                        yellow lights are everything. but wait, pink lights! red!
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+    <!-- about ends -->
+
+    <!-- portals starts -->
+    <div class="window portals-window">
+
+        <div class="title-bar">
+            <span>Portals</span>
+
+                <div class="buttons">
+                    <button class="portals-min">−</button>
+                    <button class="portals-max">❐</button>
+                    <button class="portals-close">✕</button>
+                </div>
+        </div>
+
+        <div class="window-content portals-content">
+
+            <a href="https://www.instagram.com/not_neah/" target="_blank">Instagram ↗</a>
+
+            <a href="https://open.spotify.com/user/315itckqdgr4rjwdutmd3jwd7irm?si=e20710210d7d4efc" target="_blank">Spotify ↗</a>
+
+            <a href="https://uk.pinterest.com/ellynravenhood/" target="_blank">Pinterest ↗</a>
+
+            <a href="https://github.com/neah-hub" target="_blank">GitHub ↗</a>
+
+            <a href="https://www.linkedin.com/in/neha-vinjamuri-981526286/" target="_blank">LinkedIn ↗</a>
+
+        </div>
+    </div>
+    <!-- portals ends -->
+
+    </div>    
+    
+	<main>
+		<section id="home">
+			<h2>what's good bitches?</h2>
+			<p>welcome to the website of the bitchiest bitch of all sexy time!</p>
+		</section>
+
+	</main>
+
+	<footer>
+		<p>&copy; 2026 My Website. All rights reserved.</p>
+	</footer>
+
+    <audio id="clickSound" preload="auto">
+    <source src="click.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
