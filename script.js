@@ -1,7 +1,7 @@
 /* ===========================
    ELEMENTS
 =========================== */
-
+console.log(window.supabase);
 const songsWindow = document.querySelector(".songs-window");
 const galleryWindow = document.querySelector(".gallery-window");
 const aboutWindow = document.querySelector(".about-window");
@@ -251,3 +251,25 @@ playlist.forEach((song, index) => {
     });
 
 });
+
+/* ===========================
+   COMMENTS
+=========================== */
+
+
+async function loadComments() {
+
+    const { data, error } = await window.supabase
+        .from("kissbook")
+        .select("*")
+        .order("created_at", { ascending: true });
+
+    console.log(data);
+
+    if(error){
+        console.error(error);
+    }
+
+}
+
+loadComments()
