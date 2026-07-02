@@ -284,7 +284,7 @@ async function loadComments(){
     const { data, error } = await window.supabase
         .from("kissbook")
         .select("*")
-        .order("created_at",{ascending:true});
+        .order("created_at",{ascending:false});
 
     if(error){
 
@@ -327,14 +327,21 @@ async function postComment(){
 
     if(message === "") return;
 
+    const { count } = await window.supabase
+        .from("kissbook")
+        .select("*", { count: "exact", head: true })
+        .eq("is_anonymous", true);
+
+    const anonName = `anon${count + 1}`;
+
     const { error } = await window.supabase
         .from("kissbook")
         .insert([
             {
-                username: "NELLY",
+                username: anonName,
                 email: "",
                 message: message,
-                is_anonymous: false
+                is_anonymous: true
             }
         ]);
 
@@ -349,7 +356,7 @@ async function postComment(){
 
     loadComments();
 
-}
+    }
 
 /* ===========================
    INITIALIZE
