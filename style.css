@@ -237,6 +237,12 @@ nav ul {
 
     }
 
+    #home{
+
+    margin-top:-100px;
+
+    }
+
 }
 
 @media (max-width:699px){
