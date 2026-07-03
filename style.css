@@ -230,10 +230,10 @@ nav ul {
 
      .kissbook-window{
 
-        height:73vh !important;
+        height:65vh !important;
         top:23vh !important;
         max-height: fit-content !important;
-        bottom: 4vh !important;
+        bottom: 12vh !important;
 
 
     }
