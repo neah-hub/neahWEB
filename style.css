@@ -230,7 +230,7 @@ nav ul {
 
      .kissbook-window{
 
-        height:50vh !important;
+        height:50dvh !important;
         top:23vh !important;
         max-height: none !important;
 
@@ -246,11 +246,6 @@ nav ul {
     .kissbook-window .window-content{
 
     padding:12px !important;
-
-}
-    #kissbook-comments{
-
-    max-height:25vh;
 
 }
 
