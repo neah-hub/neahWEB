@@ -44,7 +44,7 @@ document.querySelectorAll(".window").forEach(window => {
     let offsetX = 0;
     let offsetY = 0;
 
-    titleBar.addEventListener("mousedown", (e) => {
+    titleBar.addEventListener("pointerdown", (e) => {
 
         dragging = true;
 
@@ -54,7 +54,7 @@ document.querySelectorAll(".window").forEach(window => {
         titleBar.style.cursor = "grabbing";
     });
 
-    document.addEventListener("mousemove", (e) => {
+    document.addEventListener("pointermove", (e) => {
 
         if (!dragging) return;
 
@@ -64,7 +64,7 @@ document.querySelectorAll(".window").forEach(window => {
 
     });
 
-    document.addEventListener("mouseup", () => {
+    document.addEventListener("pointerup", () => {
 
         dragging = false;
         titleBar.style.cursor = "grab";
