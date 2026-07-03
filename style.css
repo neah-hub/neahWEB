@@ -181,20 +181,43 @@ nav ul {
 
 @media (max-width:699px){
 
-    .about-window,
     .kissbook-window{
 
         width:80vw !important;
         max-width:500px;
 
         left:50% !important;
-        top:21vh !important;
+        top:23vh !important;
 
     }
 
     .about-window{
 
-        height:65vh !important;
+    width:90vw !important;
+    max-width:90vw !important;
+    min-width:0 !important;
+
+
+    right:5vw !important;
+    top:21vh !important;
+
+
+    height:65vh !important;
+
+    }
+
+    .about-window table{
+
+    width:100%;
+
+    table-layout:fixed;
+
+    }
+
+    .about-window td,
+    .about-window th{
+
+    word-break:break-word;
 
     }
 
