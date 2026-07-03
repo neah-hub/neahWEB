@@ -181,6 +181,18 @@ nav ul {
 
 @media (max-width:699px){
 
+    header a{
+
+    font-size:14px;
+
+    }
+
+    header{
+
+    gap:10px;
+
+    }
+
     .kissbook-window{
 
         width:80vw !important;
