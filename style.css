@@ -181,6 +181,14 @@ nav ul {
 
 @media (max-width:600px){
 
+    footer{
+
+    margin-top:90px;
+
+    text-align:center;
+
+    }
+
     .about-window table,
     .about-window tbody,
     .about-window tr,
