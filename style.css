@@ -179,16 +179,16 @@ nav ul {
 
 /* mobile responsivity */
 
-@media (max-width:768px){
+@media (max-width:699px){
 
     .about-window,
     .kissbook-window{
 
-        width:90vw !important;
+        width:80vw !important;
         max-width:500px;
 
         left:50% !important;
-        top:17vh !important;
+        top:21vh !important;
 
     }
 
@@ -201,6 +201,66 @@ nav ul {
     .kissbook-window{
 
         height:75vh !important;
+        top:23vh !important;
+
+
+    }
+
+    .gallery-window{
+
+
+    top:17vh !important;
+
+    width:90vw !important;
+
+    left:5vw 
+
+    right:auto !important;
+
+    
+    }
+
+    .songs-window{
+
+    right:13vw !important;
+
+    left:auto !important;
+
+    top:15vh !important;
+
+    width:74vw !important;
+
+    max-width: 400px;
+
+    
+    }
+
+    .portals-window{
+
+
+    top:19vh !important;
+
+    width:50vw !important;
+
+    left:25vw !important;
+
+    right:5vw !important;
+
+    height:52vh !important;
+
+    max-height:52vh !important;
+
+
+    }   
+
+
+    .gallery-window,
+    .songs-window,
+    .portals-window,
+    .about-window,
+    .kissbook-window{
+
+        resize:none;
 
     }
 
