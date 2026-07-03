@@ -773,6 +773,10 @@ nav ul {
 
     border-bottom:2px solid #ff3f9d;
 
+    font-weight: bold;
+
+    font-size: larger;
+
 }
 
 .kissbook-window .buttons button{
@@ -861,6 +865,29 @@ nav ul {
 
 }
 
+.kiss-time{
+
+    color:#d865a1;
+
+    font-size:12px;
+
+    font-style:italic;
+
+    white-space:nowrap;
+
+}
+
+.kiss-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:8px;
+
+}
 
 /* ---------- INPUT ---------- */
 

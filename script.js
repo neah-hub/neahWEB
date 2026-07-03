@@ -301,12 +301,48 @@ async function loadComments(){
 
     data.forEach(comment=>{
 
+        const date = new Date(comment.created_at);
+
+        const now = new Date();
+
+        const diff = Math.floor((now - date) / 1000);
+
+        let formatted;
+
+        if(diff < 60){
+
+            formatted = "just now ♡";
+
+        }else{
+
+            formatted = date.toLocaleString([],{
+
+                day:"2-digit",
+                month:"short",
+                year:"numeric",
+
+                hour:"numeric",
+                minute:"2-digit",
+
+                hour12:true
+
+            }).replace(",", " ♡");
+
+        }
+
         container.innerHTML += `
 
         <div class="kiss-card">
 
-            <h3>♡ @${comment.username}</h3>
-            <p>${comment.message}</p>
+            <div class="kiss-header">
+
+                <h3>♡ @${comment.username}</h3>
+
+                <span class="kiss-time">${formatted}</span>
+
+            </div>
+
+                <p>${comment.message}</p>
 
         </div>
 
