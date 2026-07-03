@@ -146,6 +146,8 @@ kissBtn.addEventListener("click", () => {
 
     kissbookWindow.classList.add("open");
 
+    setTimeout(loadComments, 300);
+
 });
 
 document.querySelector(".kissbook-close").onclick = () => {

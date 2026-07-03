@@ -150,6 +150,8 @@ nav ul {
     opacity:0;
     visibility:hidden;
 
+    transform-origin:center;
+
     transform:scale(.1);
 
     transition:
@@ -687,67 +689,41 @@ nav ul {
 }
 /* portals ends */
 
-/* ===========================
-   KISSBOOK
-=========================== */
 
-.kissbook-window{
+/* =====================================================
+                        KISSBOOK
+===================================================== */
 
-    position:fixed;
+/* ---------- HEART ---------- */
 
-    top:18%;
+.kissbook-heart{
+
+    position:absolute;
+
+    width:650px;
+
     left:50%;
+    top:50%;
 
-    transform:translateX(-50%) scale(.1);
+    transform:translate(-50%,-50%);
 
-    width:500px;
-    height:500px;
+    pointer-events:none;
+    user-select:none;
 
-    opacity:0;
-    visibility:hidden;
+    z-index:-1;
 
-    z-index:5000;
-
-    overflow:hidden;
-
-    transition:
-        transform .45s cubic-bezier(.2,.9,.3,1),
-        opacity .35s;
+    opacity:.22;
 
 }
 
-.kissbook-window.open{
 
-    opacity:1;
-    visibility:visible;
-
-    transform:translateX(-50%) scale(1);
-
-}
-
-.kissbook-window .window-content{
-
-    height:calc(100% - 42px);
-
-    display:flex;
-
-    flex-direction:column;
-
-    overflow:hidden;
-
-    padding:20px;
-
-}
-
-/* ===========================
-   KISSBOOK WINDOW
-=========================== */
+/* ---------- WINDOW ---------- */
 
 .kissbook-window{
 
     position:fixed;
 
-    top:25%;
+    top:20%;
     left:50%;
 
     transform:translateX(-50%) scale(.1);
@@ -756,24 +732,24 @@ nav ul {
     height:500px;
 
     background:#0f060b;
-    color:#fed3d6;
+    color:#ff3f9d;
 
-    border:3px double #fed3d6;
-
-    opacity:0;
-    visibility:hidden;
-
-    z-index:6000;
-
-    overflow:hidden;
-
-    transition:
-        transform .45s cubic-bezier(.2,.9,.3,1),
-        opacity .35s;
+    border:3px double #ff3f9d;
 
     box-shadow:
         0 0 30px rgba(255,63,157,.35),
         0 0 80px rgba(255,63,157,.15);
+
+    overflow:visible;
+
+    z-index:5000;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:
+        transform .45s cubic-bezier(.2,.9,.3,1),
+        opacity .35s;
 
 }
 
@@ -785,6 +761,9 @@ nav ul {
     transform:translateX(-50%) scale(1);
 
 }
+
+
+/* ---------- TITLE BAR ---------- */
 
 .kissbook-window .title-bar{
 
@@ -812,57 +791,79 @@ nav ul {
 
 }
 
-/* ===========================
-   KISSBOOK COMMENTS
-=========================== */
 
-#kissbook-comments{
+/* ---------- CONTENT ---------- */
 
-    flex:1;
+.kissbook-window .window-content{
 
-    overflow-y:auto;
+    height:calc(100% - 42px);
 
     display:flex;
 
     flex-direction:column;
 
-    padding-right:8px;
+    overflow:hidden;
+
+    padding:20px;
+
+}
+
+
+/* ---------- COMMENTS ---------- */
+
+#kissbook-comments{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow-y:auto;
+
+    padding-right:10px;
 
 }
 
 .kiss-card{
 
-    padding:18px 5px;
+    padding:18px 6px;
 
     border-bottom:2px dashed rgba(255,63,157,.35);
 
 }
+
 .kiss-card h3{
 
-    margin:0;
+    margin:0 0 8px 0;
 
     color:#ff3f9d;
 
     font-size:18px;
 
-    text-align: left;
-
     font-weight:bold;
 
+    text-align:left;
+
 }
+
 .kiss-card p{
 
-    margin-top:0px;
+    margin:0;
 
     color:#ff3f9d;
 
     line-height:1;
 
-    text-align: left;
+    text-align:left;
 
     white-space:pre-wrap;
 
 }
+
+
+/* ---------- INPUT ---------- */
+
 .kissbook-input{
 
     margin-top:auto;
@@ -878,25 +879,26 @@ nav ul {
     border-top:3px double #ff3f9d;
 
 }
-#kissbook-message{
 
-    resize:none;
+#kissbook-message{
 
     height:90px;
 
+    resize:none;
+
+    padding:14px;
+
     background:#fff7fb;
+
+    color:#ff3f9d;
 
     border:2px solid #ff3f9d;
 
-    color:#8f275d;
-
-    padding:14px;
+    outline:none;
 
     font-family:"Anonymous Pro", monospace;
 
     font-size:15px;
-
-    outline:none;
 
 }
 
@@ -905,9 +907,15 @@ nav ul {
     color:#ff79bb;
 
 }
+
+
+/* ---------- BUTTON ---------- */
+
 #post-kiss{
 
     align-self:flex-end;
+
+    padding:10px 28px;
 
     background:#ff3f9d;
 
@@ -915,26 +923,27 @@ nav ul {
 
     border:none;
 
-    padding:10px 28px;
+    cursor:pointer;
 
     font-family:"Anonymous Pro", monospace;
 
     font-size:16px;
 
-    cursor:pointer;
-
     transition:.25s;
 
 }
+
 #post-kiss:hover{
 
-    transform:scale(1.06);
+    transform:scale(1.05);
 
-    box-shadow:0 0 18px rgba(255,63,157,.5);
+    box-shadow:0 0 18px rgba(255,63,157,.45);
 
 }
 
-/* scrolling  */
+
+/* ---------- SCROLLBAR ---------- */
+
 #kissbook-comments::-webkit-scrollbar{
 
     width:10px;
@@ -951,9 +960,9 @@ nav ul {
 
     background:#ff3f9d;
 
-    border-radius:10px;
-
     border:2px solid #fed3d6;
+
+    border-radius:10px;
 
 }
 
