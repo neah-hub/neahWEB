@@ -179,16 +179,30 @@ nav ul {
 
 /* mobile responsivity */
 
-@media (max-width: 768px){
+@media (max-width:768px){
 
-    .window{
+    .about-window,
+    .kissbook-window{
 
         width:90vw !important;
-        left:5vw !important;
-        top:15vh !important;
+        max-width:500px;
+
+        left:50% !important;
+        top:17vh !important;
 
     }
 
+    .about-window{
+
+        height:65vh !important;
+
+    }
+
+    .kissbook-window{
+
+        height:75vh !important;
+
+    }
 
     #kiss-btn{
 
@@ -203,6 +217,7 @@ nav ul {
         transform:none;
 
     }
+
 }
 
 .title-bar {
