@@ -411,3 +411,21 @@ window.playSong = playSong;
 window.pauseSong = pauseSong;
 window.volumeUp = volumeUp;
 window.volumeDown = volumeDown;
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    if(window.innerWidth <= 500){
+
+        document.getElementById("home-btn").textContent = "H";
+        document.getElementById("about-btn").textContent = "A";
+        document.getElementById("songs-btn").textContent = "S";
+        document.getElementById("gallery-btn").textContent = "G";
+        document.getElementById("portals-btn").textContent = "P";
+
+    }
+
+});
