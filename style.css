@@ -1015,19 +1015,18 @@ nav ul {
 
 .kissbook-window .window-content{
 
+    height:calc(100% - 42px);
+
     display:flex;
 
     flex-direction:column;
-
-    height:100%;
-
-    box-sizing:border-box;
 
     overflow:hidden;
 
     padding:20px;
 
 }
+
 
 /* ---------- COMMENTS ---------- */
 
@@ -1109,7 +1108,7 @@ nav ul {
 
 .kissbook-input{
 
-    margin-top:auto;
+    margin-top:12px;
 
     display:flex;
 
