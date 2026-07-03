@@ -213,7 +213,7 @@ nav ul {
 
     width:90vw !important;
 
-    left:5vw 
+    left:5vw;
 
     right:auto !important;
 
@@ -277,7 +277,6 @@ nav ul {
         transform:none;
 
     }
-
 }
 
 .title-bar {
