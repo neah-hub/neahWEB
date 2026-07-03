@@ -273,6 +273,8 @@ nav ul {
 
     max-height:52vh !important;
 
+    min-width:fit-content !important;
+
 
     }   
 
