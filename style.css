@@ -332,9 +332,9 @@ nav ul {
 
     right:5vw !important;
 
-    height:52vh !important;
+    height:auto !important;
 
-    max-height:fit-content !important;
+    max-height:none !important;
 
     min-width:fit-content !important;
 
