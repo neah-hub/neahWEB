@@ -243,6 +243,12 @@ nav ul {
 
     }
 
+    .kissbook-window .window-content{
+
+    padding:12px !important;
+
+}
+
 }
 
 @media (max-width:699px){
