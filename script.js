@@ -423,7 +423,7 @@ window.addEventListener("DOMContentLoaded", () => {
         document.getElementById("home-btn").textContent = "⌂";
         document.getElementById("about-btn").textContent = "?";
         document.getElementById("songs-btn").textContent = "♪";
-        document.getElementById("gallery-btn").textContent = "🖼";
+        document.getElementById("gallery-btn").textContent = "⛶";
         document.getElementById("portals-btn").textContent = "↗";
 
     }
