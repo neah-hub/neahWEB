@@ -228,6 +228,16 @@ nav ul {
 
     }
 
+     .kissbook-window{
+
+        height:73vh !important;
+        top:23vh !important;
+        max-height: fit-content !important;
+        bottom: 4vh !important;
+
+
+    }
+
 }
 
 @media (max-width:699px){
