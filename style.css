@@ -179,6 +179,57 @@ nav ul {
 
 /* mobile responsivity */
 
+@media (max-width:600px){
+
+    .about-window table,
+    .about-window tbody,
+    .about-window tr,
+    .about-window td{
+
+        display:block;
+
+    }
+
+    .about-window tr{
+
+        display:block;
+
+        margin-bottom:20px;
+
+        padding-bottom:18px;
+
+        border-bottom:2px solid rgba(254,211,214,.35);
+
+    }
+
+    .about-window td:first-child{
+
+        display:block;
+
+        font-weight:bold;
+
+        font-size:22px;
+
+        margin-bottom:10px;
+
+        border:none;
+
+        padding:0;
+
+    }
+
+    .about-window td:last-child{
+
+    display:block;
+
+    padding:0;
+
+    border:none;
+
+    }
+
+}
+
 @media (max-width:699px){
 
     .kissbook-window{
