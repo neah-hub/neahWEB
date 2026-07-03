@@ -420,11 +420,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if(window.innerWidth <= 500){
 
-        document.getElementById("home-btn").textContent = "H";
-        document.getElementById("about-btn").textContent = "A";
-        document.getElementById("songs-btn").textContent = "S";
-        document.getElementById("gallery-btn").textContent = "G";
-        document.getElementById("portals-btn").textContent = "P";
+        document.getElementById("home-btn").textContent = "⌂";
+        document.getElementById("about-btn").textContent = "?";
+        document.getElementById("songs-btn").textContent = "♪";
+        document.getElementById("gallery-btn").textContent = "🖼";
+        document.getElementById("portals-btn").textContent = "↗";
 
     }
 
