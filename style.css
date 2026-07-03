@@ -177,6 +177,34 @@ nav ul {
     transform:scale(1);
 }
 
+/* mobile responsivity */
+
+@media (max-width: 768px){
+
+    .window{
+
+        width:90vw !important;
+        left:5vw !important;
+        top:15vh !important;
+
+    }
+
+
+    #kiss-btn{
+
+        width:100px;
+        height:auto;
+
+        top:18px;
+        left:16px;
+
+        right:auto;
+
+        transform:none;
+
+    }
+}
+
 .title-bar {
     height: 42px;
 
