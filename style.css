@@ -247,7 +247,15 @@ nav ul {
 
     padding:12px !important;
 
-}
+    }
+
+    #kissbook-comments{
+
+        flex:none !important;
+
+        height:28vh !important;
+
+    }
 
 }
 
