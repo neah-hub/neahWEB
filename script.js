@@ -406,3 +406,8 @@ async function postComment(){
 document.getElementById("post-kiss").addEventListener("click", postComment);
 
 loadComments();
+
+window.playSong = playSong;
+window.pauseSong = pauseSong;
+window.volumeUp = volumeUp;
+window.volumeDown = volumeDown;
