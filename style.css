@@ -274,11 +274,6 @@ nav ul {
 
     }
 
-    body.zine main{
-
-        height:calc(100vh - 80px);
-    }
-
 }
 
 @media (max-width:699px){
