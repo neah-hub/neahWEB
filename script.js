@@ -370,15 +370,34 @@ async function postComment(){
     const message = messageBox.value.trim();
     const customName = nameBox.value.trim();
 
+    if(customName.length > 20){
+
+    alert("Name must be under 20 characters.");
+    return;
+
+    }
+
     if(message === "") return;
 
-    const { count } = await window.supabase
-        .from("kissbook")
-        .select("*", { count: "exact", head: true })
-        .eq("is_anonymous", true);
+    let username;
+    let anonymous;
 
-    const username =
-        customName || `anon${count + 1}`;
+    if(customName !== ""){
+
+        username = customName;
+        anonymous = false;
+
+    }else{
+
+        const { count } = await window.supabase
+            .from("kissbook")
+            .select("*", { count: "exact", head: true })
+            .eq("is_anonymous", true);
+
+        username = `anon${count + 1}`;
+        anonymous = true;
+
+    }
 
     const { error } = await window.supabase
         .from("kissbook")
@@ -387,7 +406,7 @@ async function postComment(){
                 username: username,
                 email: "",
                 message: message,
-                is_anonymous: true
+                is_anonymous: anonymous
             }
         ]);
 
