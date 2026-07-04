@@ -1329,6 +1329,12 @@ footer p {
 
 /* magazine */
 
+body.zine main{
+
+    padding-bottom:0;
+
+}
+
 body.zine{
 
     background:black;
