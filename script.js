@@ -330,6 +330,24 @@ async function loadComments(){
 
         }
 
+        if(window.innerWidth <= 699){
+
+    container.innerHTML += `
+
+    <div class="kiss-card">
+
+        <h3>♡ @${comment.username}</h3>
+
+        <p>${comment.message}</p>
+
+        <span class="kiss-time">${formatted}</span>
+
+    </div>
+
+    `;
+
+    }else{
+
         container.innerHTML += `
 
         <div class="kiss-card">
@@ -342,11 +360,13 @@ async function loadComments(){
 
             </div>
 
-                <p>${comment.message}</p>
+            <p>${comment.message}</p>
 
         </div>
 
         `;
+
+    }
 
     });
 

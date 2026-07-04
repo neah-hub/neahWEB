@@ -288,11 +288,15 @@ nav ul {
 
     .kiss-time{
 
-        width:100%;
+    display:block;
 
-        text-align:right;
+    width:100%;
 
-    }
+    text-align:right;
+
+    margin-top:8px;
+
+}
 
     #kissbook-name{
 
@@ -1129,6 +1133,8 @@ nav ul {
     font-style:italic;
 
     white-space:nowrap;
+
+    text-align:right;
 
 }
 
