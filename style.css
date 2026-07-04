@@ -1305,3 +1305,67 @@ footer p {
     text-align:center;
 
 }
+
+/* magazine */
+
+body.zine{
+
+    background:black;
+
+    min-height:100vh;
+
+    cursor:crosshair;
+
+
+}
+body.zine{
+
+    background:
+        url("darkmode.jpg")
+        center center / cover
+        fixed
+        no-repeat;
+
+    min-height:100vh;
+
+}
+
+#logo{
+
+    cursor:pointer;
+
+}
+
+#logo.clicked{
+
+    animation:logoClick .22s ease;
+
+}
+
+@keyframes logoClick{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    35%{
+
+        transform:scale(.90);
+
+    }
+
+    70%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}

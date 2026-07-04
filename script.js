@@ -15,7 +15,8 @@ const homeBtn = document.getElementById("home-btn");
 
 const clickSound = document.getElementById("clickSound");
 const kissSound = document.getElementById("kissSound");
-
+const zineOpenSound = document.getElementById("zineOpenSound");
+const zineCloseSound = document.getElementById("zineCloseSound");
 /* ===========================
    PLAYLIST
 =========================== */
@@ -470,6 +471,48 @@ window.addEventListener("DOMContentLoaded", () => {
         document.getElementById("songs-btn").textContent = "♪";
         document.getElementById("gallery-btn").textContent = "⛶";
         document.getElementById("portals-btn").textContent = "↗";
+
+    }
+
+});
+
+const logo = document.getElementById("logo");
+
+logo.addEventListener("click", () => {
+
+    logo.classList.remove("clicked");
+
+    void logo.offsetWidth;
+
+    logo.classList.add("clicked");
+
+    if(document.body.classList.contains("zine")){
+
+    zineOpenSound.currentTime = 0;
+    zineOpenSound.play().catch(() => {});
+
+    }else{
+
+    zineCloseSound.currentTime = 0;
+    zineCloseSound.play().catch(() => {});
+
+    }
+
+    document.body.classList.toggle("zine");
+
+    document.querySelectorAll(".window").forEach(window => {
+
+    window.classList.remove("open");
+
+    });
+
+    if(document.body.classList.contains("zine")){
+
+        logo.textContent = "neahZINE";
+
+    }else{
+
+        logo.textContent = "neahWEB";
 
     }
 
