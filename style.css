@@ -1131,9 +1131,35 @@ nav ul {
 
 }
 
+#kissbook-name{
+
+    padding:10px 14px;
+
+    background:#0f060b;
+
+    border:2px solid #3b1f2f;
+
+    color:#ff3f9d;
+
+    outline:none;
+
+    font-family:"Anonymous Pro", monospace;
+
+    font-size:15px;
+
+    width:50%;
+
+}
+
+#kissbook-name::placeholder{
+
+    color:#ff79bb;
+
+}
+
 #kissbook-message{
 
-    height:90px;
+    height:60px;
 
     resize:none;
 

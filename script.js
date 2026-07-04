@@ -364,7 +364,11 @@ async function postComment(){
     const messageBox =
         document.getElementById("kissbook-message");
 
+    const nameBox =
+    document.getElementById("kissbook-name");
+
     const message = messageBox.value.trim();
+    const customName = nameBox.value.trim();
 
     if(message === "") return;
 
@@ -373,13 +377,14 @@ async function postComment(){
         .select("*", { count: "exact", head: true })
         .eq("is_anonymous", true);
 
-    const anonName = `anon${count + 1}`;
+    const username =
+        customName || `anon${count + 1}`;
 
     const { error } = await window.supabase
         .from("kissbook")
         .insert([
             {
-                username: anonName,
+                username: username,
                 email: "",
                 message: message,
                 is_anonymous: true
@@ -394,6 +399,7 @@ async function postComment(){
     }
 
     messageBox.value = "";
+    nameBox.value = "";
 
     loadComments();
 
