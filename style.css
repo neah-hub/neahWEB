@@ -258,6 +258,14 @@ nav ul {
 
     }
 
+    /* zinemedia */
+
+    body.zine nav ul{
+
+    gap:8px;
+
+    }
+
 }
 
 @media (max-width:699px){
@@ -418,7 +426,7 @@ nav ul {
         width:100px;
         height:auto;
 
-        top:18px;
+        top:34px;
         left:16px;
 
         right:auto;
