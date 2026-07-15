@@ -1712,4 +1712,49 @@ body.zine footer{
 
     }
 
+
+    #commonplace-page,
+    #about-page,
+    #music-page{
+
+        height:100vh;
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+    #commonplace-page::-webkit-scrollbar,
+    #about-page::-webkit-scrollbar,
+    #music-page::-webkit-scrollbar{
+
+        width:6px;
+
+    }
+
+    #commonplace-page::-webkit-scrollbar-track,
+    #about-page::-webkit-scrollbar-track,
+    #music-page::-webkit-scrollbar-track{
+
+        background:transparent;
+
+    }
+
+    #commonplace-page::-webkit-scrollbar-thumb,
+    #about-page::-webkit-scrollbar-thumb,
+    #music-page::-webkit-scrollbar-thumb{
+
+        background:#fed3d6;
+
+        border-radius:999px;
+
+    }
+
+    #commonplace-page::-webkit-scrollbar-thumb:hover,
+    #about-page::-webkit-scrollbar-thumb:hover,
+    #music-page::-webkit-scrollbar-thumb:hover{
+
+        background:#f59ac6;
+
+    }
+
 }
