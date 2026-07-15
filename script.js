@@ -459,7 +459,7 @@ window.volumeUp = volumeUp;
 window.volumeDown = volumeDown;
 
 /* ===========================
-   RESPONSIVE
+   RESPONSIVE  
 =========================== */
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -478,42 +478,59 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const logo = document.getElementById("logo");
 
-logo.addEventListener("click", () => {
+function toggleZine(){
 
-    logo.classList.remove("clicked");
+    const activeLogo = document.body.classList.contains("zine")
+    ? document.getElementById("zine-back")
+    : logo;
 
-    void logo.offsetWidth;
-
-    logo.classList.add("clicked");
+    activeLogo.classList.remove("clicked");
+    void activeLogo.offsetWidth;
+    activeLogo.classList.add("clicked");
 
     if(document.body.classList.contains("zine")){
 
-    zineOpenSound.currentTime = 0;
-    zineOpenSound.play().catch(() => {});
+        zineOpenSound.currentTime = 0;
+        zineOpenSound.play().catch(() => {});
 
     }else{
 
-    zineCloseSound.currentTime = 0;
-    zineCloseSound.play().catch(() => {});
+        zineCloseSound.currentTime = 0;
+        zineCloseSound.play().catch(() => {});
 
     }
 
     document.body.classList.toggle("zine");
 
-    document.querySelectorAll(".window").forEach(window => {
-
-    window.classList.remove("open");
-
-    });
+    const home = document.getElementById("home");
+    const zine = document.getElementById("zine-home");
 
     if(document.body.classList.contains("zine")){
+
+        home.style.display = "none";
+        zine.style.display = "grid";
 
         logo.textContent = "neahZINE";
 
     }else{
 
+        zine.style.display = "none";
+        home.style.display = "block";
+
         logo.textContent = "neahWEB";
 
     }
 
-});
+    document.querySelectorAll(".window").forEach(window => {
+
+        window.classList.remove("open");
+
+    });
+
+}
+
+logo.addEventListener("click", toggleZine);
+
+document
+    .getElementById("zine-back")
+    .addEventListener("click", toggleZine);

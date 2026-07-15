@@ -1331,8 +1331,6 @@ body.zine{
 
     min-height:100vh;
 
-    cursor:crosshair;
-
 
 }
 body.zine{
@@ -1344,6 +1342,13 @@ body.zine{
         no-repeat;
 
     min-height:100vh;
+    color:#fed3d6;
+
+}
+
+body.zine header{
+
+    display:none;
 
 }
 
@@ -1384,5 +1389,141 @@ body.zine{
         transform:scale(1);
 
     }
+
+}
+
+#zine-home{
+
+    display:none;
+
+    width:100%;
+
+    text-align:left;
+
+}
+
+#zine-back{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:5.5px 0 15px 12px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    color:#fed3d6;
+
+}
+
+#zine-back .logo-text{
+
+    font-family:"Anonymous Pro", monospace;
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+#zine-back.clicked{
+
+    animation:logoClick .29s ease;
+
+}
+
+.zine-container{
+
+    width:min(850px,90vw);
+
+    margin-top: 45px !important;
+    margin: 60px auto;
+
+    padding-top:20px;
+    padding-left:20px;
+
+    background:rgba(15,6,11,.75);
+
+    text-align:left;
+
+}
+
+.zine-container hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,214,222,.35);
+
+    margin-top: 20px;
+
+}
+
+.zine-container h2{
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+}
+
+.zine-container h3{
+    margin-bottom:18px;
+
+}
+
+.zine-currently p{
+
+    margin:0;
+
+    font-size:1.1rem;
+
+    text-align:left !important;
+
+
+}
+
+.zine-recent ul,
+.zine-archive ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.zine-recent li,
+.zine-archive li{
+
+    margin:12px 0;
+
+}
+
+.zine-container a{
+
+    color:#fed3d6;
+
+    text-decoration:underline;
+
+}
+
+.zine-container a:hover{
+
+    opacity:.7;
+
+}
+
+body.zine footer{
+
+    display:none;
 
 }
