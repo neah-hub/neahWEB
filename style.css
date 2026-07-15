@@ -258,41 +258,58 @@ nav ul {
 
     }
 
-    /* zinemedia */
+   /* zinemedia */
 
     body.zine nav ul{
 
-    gap:8px;
+        gap:8px;
 
     }
 
     body.zine{
 
-    height:100vh;
+        height:100vh;
 
-    overflow:hidden;
+        overflow:hidden;
 
     }
 
     .zine-container{
 
-    width:calc(100vw - 48px) !important;
+        width:min(92vw, 700px);
 
-    margin:30px auto !important;
+        margin:30px auto;
 
-    padding:20px !important;
+        padding:24px;
 
-    box-sizing:border-box;
+        box-sizing:border-box;
+
+        overflow-wrap:break-word;
+
+        word-break:break-word;
 
     }
 
     .zine-container h3{
 
-        font-size:1.1rem;
-        line-height:1;
+        font-size:1.15rem;
+
+        line-height:1.4;
+
+        margin-bottom:18px;
 
     }
 
+    .zine-container p,
+    .zine-container li{
+
+        line-height:1.7;
+
+        overflow-wrap:break-word;
+
+        word-break:break-word;
+
+    }
 
 
 }
