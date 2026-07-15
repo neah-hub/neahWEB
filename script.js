@@ -17,6 +17,7 @@ const clickSound = document.getElementById("clickSound");
 const kissSound = document.getElementById("kissSound");
 const zineOpenSound = document.getElementById("zineOpenSound");
 const zineCloseSound = document.getElementById("zineCloseSound");
+
 /* ===========================
    PLAYLIST
 =========================== */
@@ -478,6 +479,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const logo = document.getElementById("logo");
 
+const home = document.getElementById("home");
+const zine = document.getElementById("zine-home");
+
+const commonplace = document.getElementById("commonplace-page");
+const about = document.getElementById("about-page");
+const music = document.getElementById("music-page");
+
 function toggleZine(){
 
     const activeLogo = document.body.classList.contains("zine")
@@ -502,12 +510,12 @@ function toggleZine(){
 
     document.body.classList.toggle("zine");
 
-    const home = document.getElementById("home");
-    const zine = document.getElementById("zine-home");
-
     if(document.body.classList.contains("zine")){
 
         home.style.display = "none";
+
+        hideAllZinePages();
+
         zine.style.display = "grid";
 
         logo.textContent = "neahZINE";
@@ -534,3 +542,76 @@ logo.addEventListener("click", toggleZine);
 document
     .getElementById("zine-back")
     .addEventListener("click", toggleZine);
+
+/* ===========================
+   3 ZINE LINKS
+=========================== */
+
+function hideAllZinePages(){
+
+    zine.style.display = "none";
+    commonplace.style.display = "none";
+    about.style.display = "none";
+    music.style.display = "none";
+
+}
+
+document.getElementById("commonplace-link").addEventListener("click", e => {
+
+    e.preventDefault();
+
+    hideAllZinePages();
+
+    commonplace.style.display = "grid";
+
+});
+
+document.getElementById("about-link").addEventListener("click", e => {
+
+    e.preventDefault();
+
+    hideAllZinePages();
+
+    about.style.display = "grid";
+
+});
+
+document.getElementById("music-link").addEventListener("click", e => {
+
+    e.preventDefault();
+
+    hideAllZinePages();
+
+    music.style.display = "grid";
+
+});
+
+document.getElementById("back-from-commonplace").addEventListener("click", e => {
+
+    e.preventDefault();
+
+    hideAllZinePages();
+
+    zine.style.display = "grid";
+
+});
+
+document.getElementById("back-from-about").addEventListener("click", e => {
+
+    e.preventDefault();
+
+    hideAllZinePages();
+
+    zine.style.display = "grid";
+
+});
+
+document.getElementById("back-from-music").addEventListener("click", e => {
+
+    e.preventDefault();
+
+    hideAllZinePages();
+
+    zine.style.display = "grid";
+
+});
